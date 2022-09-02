@@ -8,14 +8,14 @@ const BlogDetails = () => {
     isPending,
     error,
   } = useFetch(
-    'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice/db' +
+    'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice/blogs' +
       id,
   );
   const history = useHistory();
 
   const handleDelete = () => {
     fetch(
-      'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice/db' +
+      'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice/blogs' +
         blog.id,
       {
         method: 'DELETE',
