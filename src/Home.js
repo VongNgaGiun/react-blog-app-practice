@@ -7,7 +7,7 @@ const Home = () => {
     isPending,
     error,
   } = useFetch(
-    'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice',
+    'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice/db',
   );
 
   return (
