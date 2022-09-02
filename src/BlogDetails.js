@@ -7,13 +7,20 @@ const BlogDetails = () => {
     data: blog,
     isPending,
     error,
-  } = useFetch('http://localhost:8000/blogs/' + id);
+  } = useFetch(
+    'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice' +
+      id,
+  );
   const history = useHistory();
 
   const handleDelete = () => {
-    fetch('http://localhost:8000/blogs/' + blog.id, {
-      method: 'DELETE',
-    }).then(() => {
+    fetch(
+      'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice' +
+        blog.id,
+      {
+        method: 'DELETE',
+      },
+    ).then(() => {
       history.push('/');
     });
   };

@@ -14,11 +14,14 @@ const Create = () => {
 
     setIsPending(true);
 
-    fetch('http://localhost:8000/blogs', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(blog),
-    }).then(() => {
+    fetch(
+      'https://my-json-server.typicode.com/vongngagiun/json-server-blog-practice',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(blog),
+      },
+    ).then(() => {
       console.log('new blog added');
       setIsPending(false);
       history.push('/');
